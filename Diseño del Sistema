@@ -1,0 +1,42 @@
+# Diseño del Sistema
+
+El flujo del sistema inicia con el login del administrador. Si las credenciales son correctas, se muestra el menú principal donde se pueden realizar las distintas operaciones del sistema.
+
+## Descripción de clases
+
+### Persona (Clase abstracta)
+Representa una entidad base con atributos comunes:
+- id
+- nombre
+
+De esta clase heredan Doctor y Paciente.
+
+### Doctor
+Hereda de Persona y agrega:
+- especialidad
+
+### Paciente
+Hereda de Persona.
+
+### Cita
+Representa una cita médica:
+- id
+- fecha y hora
+- motivo
+- doctor
+- paciente
+
+### Administrador
+Encargado del control de acceso al sistema mediante usuario y contraseña.
+
+### SistemaClinico
+Contiene la lógica del sistema:
+- Alta de doctores
+- Alta de pacientes
+- Creación de citas
+
+### ArchivoCSV
+Clase utilitaria encargada del almacenamiento de la información en archivos CSV y de la creación automática de archivos si no existen.
+
+### Main
+Clase principal donde inicia la ejecución del programa.
